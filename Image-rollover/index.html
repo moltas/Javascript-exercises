@@ -1,0 +1,32 @@
+<!--Picture of Homer Simpson that will change when you hover over, and change back when you remove mouse -->
+<!doctype html>
+<html>
+ 
+<head>
+<meta charset="utf-8">
+<title>Image Rollover</title>
+ 
+<!--JavaScript code goes here.-->
+<script language="javascript">
+        function MouseRollover(MyImage) {
+         MyImage.src = "images/homer-simpson2.jpg";
+    	}
+
+        function MouseOut(MyImage) {
+                MyImage.src = "images/homer-simpson.jpg";
+   		 }
+</script>
+</head>
+ 
+
+<body>
+ 
+<div align="center">
+<!--The rollover image displays here.-->
+<img src="images/homer-simpson.jpg" width="650px" height="550px" 
+onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)" />
+</div>
+ 
+</body>
+</html>
