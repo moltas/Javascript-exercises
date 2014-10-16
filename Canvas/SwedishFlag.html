@@ -1,0 +1,36 @@
+<!--This little program uses simple canvas code to draw a Swedish flag on canvas area -->
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Sveriges flagga i HTML canvas</title>
+	</head>
+
+
+
+	<body>
+		<canvas id="myCanvas" width="1000px" height="600px" style="border:1px solid black"></canvas>
+
+		<script>
+
+			var myCanvas = document.getElementById("myCanvas");
+			var context = myCanvas.getContext("2d");
+
+			context.fillStyle = "blue";
+			//fyller en rektangel med färgen blå,
+			// ( y, x, bredd, höjd)
+			context.fillRect(0, 0, 1000, 600);
+
+			//ändrar färg till gul
+			context.fillStyle = "yellow";
+			//ritar det vertikala strecket 
+			context.fillRect(425, 0, 100, 600);
+			//det horisontella
+			context.fillRect(0, 250, 1000, 100);
+
+		</script>
+
+
+
+	</body>
+</html>
