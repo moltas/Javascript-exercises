@@ -1,0 +1,31 @@
+
+
+#wrapper {
+	margin: 50px 0 0 50px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	margin-bottom: 5px;
+	background: lightgray;
+	height: 40px;
+	width: 450px;
+}
+
+
+
+input {
+	position: absolute;
+	left: 100px;
+}
+
+
+.remove {
+	position: relative;
+	top: -40px;
+	right: -400px;
+
+}
