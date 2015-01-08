@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Slidebars Control Classes Example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Slidebars CSS -->
+		<link rel="stylesheet" href="slidebars/slidebars.css">
+		
+		<!-- Example Styles -->
+		<link rel="stylesheet" href="example-styles.css">
+
+	</head>
+	
+	<body>	
+		<div id="sb-site">
+			<div class="container">
+				<header>
+					<div id="header">
+						<h1 id="logo">Tobias Johansson</h1>
+						<a href="#" class="sb-toggle-right" id="nav-button">&#9776;</a>
+					</div>	
+				</header>
+				
+			</div>
+
+
+
+		</div>
+		
+
+
+
+		
+		<div class="sb-slidebar sb-right">
+			<!-- Your right Slidebar content. -->
+			<button class="sb-close" type="button">CLOSE</button>
+		</div>
+				
+
+
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<!-- Slidebars -->
+		<script src="slidebars/slidebars.js"></script>
+		<script>
+			(function($) {
+				$(document).ready(function() {
+					$.slidebars();
+
+
+				});
+			}) (jQuery);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<form NAME="Calc">
+<TABLE BORDER=4>
+<TR>
+<TD>
+<INPUT TYPE="text"   NAME="Input" Size="16">
+<br>
+</td>
+</tr>
+	<tr>
+		<td>
+			<input type="button" NAME="one"   VALUE="  1  " OnClick="Calc.Input.value += '1'">
+			<input type="button" NAME="two"   VALUE="  2  " OnCLick="Calc.Input.value += '2'">
+			<input type="button" NAME="three" VALUE="  3  " OnClick="Calc.Input.value += '3'">
+			<input type="button" NAME="plus"  VALUE="  +  " OnClick="Calc.Input.value += ' + '">
+			<br>
+			<input type="button" NAME="four"  VALUE="  4  " OnClick="Calc.Input.value += '4'">
+			<input type="button" NAME="five"  VALUE="  5  " OnCLick="Calc.Input.value += '5'">
+			<input type="button" NAME="six"   VALUE="  6  " OnClick="Calc.Input.value += '6'">
+			<input type="button" NAME="minus" VALUE="  -  " OnClick="Calc.Input.value += ' - '">
+			<br>
+			<input type="button" NAME="seven" VALUE="  7  " OnClick="Calc.Input.value += '7'">
+			<input type="button" NAME="eight" VALUE="  8  " OnCLick="Calc.Input.value += '8'">
+			<input type="button" NAME="nine"  VALUE="  9  " OnClick="Calc.Input.value += '9'">
+			<input type="button" NAME="times" VALUE="  x  " OnClick="Calc.Input.value += ' * '">
+			<br>
+			<input type="button" NAME="clear" VALUE="  c  " OnClick="Calc.Input.value = ''">
+			<input type="button" NAME="zero"  VALUE="  0  " OnClick="Calc.Input.value += '0'">
+			<input type="button" NAME="DoIt"  VALUE="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+			<input type="button" NAME="div"   VALUE="  /  " OnClick="Calc.Input.value += ' / '">
+			<br>
+		</td>
+	</tr>
+</table>
+</form>
+
+
+
+	<script type="text/javascript"src="javascript/operations.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+@import url(normalize.css);
+@import url(media_queries.css);
+/*$pageHeight: 1070px;*/
+/* The font */
+@font-face {
+  font-family: "JaapokkiRegular";
+  src: url("../font/jaapokki-regular.ttf"); }
+*:before, *:after {
+  box-sizing: border-box; }
+
+/* clearfix to avoid parents with floated childs to collapse */
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/* ---------------- */
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: black; }
+
+html {
+  font-size: 100%;
+  /* ~16px */ }
+
+body {
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em; }
+
+h1, h2 {
+  font-family: "JaapokkiRegular"; }
+
+p {
+  font-size: 1.2em; }
+
+.container {
+  width: 100%;
+  height: 2140px;
+  padding: 0px; }
+
+.center {
+  text-align: center; }
+
+/* 
+	Header
+
+*/
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  height: 90px; }
+
+/* overwrite the default color of anchor elements */
+header a,
+header a:hover,
+header a:visited,
+header a:active {
+  color: white; }
+
+/* active class that's added to navmenu in jquery */
+a.active {
+  border-bottom: 1px solid #ecf0f1; }
+
+/* changes appearance of header when scrolling down */
+.scrollDisplay {
+  background: #fff;
+  color: #000;
+  -webkit-transition: background 0.3s ease-in 0s;
+  -moz-transition: background 0.3s ease-in 0s;
+  transition: background 0.3s ease-in 0s;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.2);
+  /* Includes the Sass mixin named "box-shadow" */ }
+
+.head-wrapper {
+  padding: 0 5.25%;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto; }
+  .head-wrapper .logo {
+    /*float: left;*/
+    /*margin: 1% 0;*/
+    font-size: 1.875em;
+    font-weight: 200; }
+  .head-wrapper .nav-menu {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 40px; }
+
+/*
+=============================================================================
+	Home page
+-----------------------------------------------------------------------------	
+*/
+#page1 {
+  margin-top: 90px;
+  /* top margin for header height */
+  height: 850px;
+  background: url("../images/frost.jpg");
+  max-width: 100%;
+  padding: 5.2%;
+  padding-top: 180px; }
+
+.welcome-text {
+  font-family: "JaapokkiRegular";
+  color: white;
+  font-weight: 200;
+  margin: 0 auto; }
+  .welcome-text p {
+    font-size: 1.2em; }
+
+/*
+=============================================================================
+	About page
+-----------------------------------------------------------------------------	
+*/
+#page2 {
+  background-color: #fff;
+  padding: 5.2%; }
+
+.aboutme-text {
+  float: left;
+  width: 30%;
+  background: lightgray;
+  padding: 10px; }
+  .aboutme-text p {
+    margin-top: 10px;
+    color: black;
+    line-height: 2; }
+
+.aboutme-img {
+  float: right;
+  width: 60%;
+  max-width: 100%;
+  height: auto; }
+  .aboutme-img img {
+    max-width: 100%; }
+
+/*
+=============================================================================
+	Portfolio page
+-----------------------------------------------------------------------------	
+*/
+#page3 {
+  background-color: lightgray;
+  padding: 5.2%; }
+
+.grid {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  position: relative; }
+
+.box {
+  position: relative;
+  float: left;
+  width: 47%;
+  margin-top: 60px;
+  margin-right: 6%; }
+
+.box img {
+  max-width: 100%; }
+
+.box-content {
+  float: left;
+  background-color: #fff;
+  width: 93%;
+  padding: 35px 3% 20px 4%;
+  box-shadow: 0px 9px 8px -10px rgba(50, 50, 50, 0.25);
+  line-height: 20px;
+  position: relative;
+  bottom: 8px; }
+
+.box-title {
+  float: left;
+  color: black; }
+
+.tech-used {
+  float: right;
+  font-size: 0.8em; }
+
+.tech-used p {
+  display: block;
+  color: #8F8D8E;
+  text-align: center; }
+
+.tech-used span:after {
+  content: ","; }
+
+.tech-used span:last-child:after {
+  content: ""; }
+
+.last {
+  /* Removes the margin-right on last box on every row, so both boxes fit. */
+  margin-right: 0; }
+
+/*
+=============================================================================
+	Contact Page
+-----------------------------------------------------------------------------	
+*/
+#page4 {
+  background: #02030A;
+  padding: 2.62% 5.2%; }
+
+#page4 .page-title {
+  color: white;
+  font-size: 3.125em;
+  text-align: center; }
+
+.contactmethods {
+  color: #656565;
+  text-align: center;
+  padding: 1%;
+  margin: 0 auto; }
+  .contactmethods dt {
+    font-size: 1.25em; }
+  .contactmethods a {
+    color: #4D91F0;
+    font-size: 1.5625em; }
+
+#socialmedia {
+  width: 150px;
+  display: block;
+  margin: 0 auto; }
+
+#socialmedia img {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  float: left; }
+
+.page-wrapper {
+  height: 100%; }
+
+.page-title {
+  font-size: 3.125em;
+  font-weight: 300;
+  color: black;
+  text-align: center; }
+
+/*
+=============================================================================
+	Media Queries
+-----------------------------------------------------------------------------	
+*/
+@media screen and (min-width: 500px) {
+  .welcome-text h2 {
+    font-size: 3.75em; }
+
+  .nav-menu {
+    min-width: 450px; } }
+@media screen and (max-width: 800px) {
+  .box {
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 0px; }
+
+  .nav-menu {
+    float: right; } }
+/*
+=============================================================================
+	Bigger screens
+-----------------------------------------------------------------------------	
+*/
+@media screen and (max-width: 1500px) {
+  #page4 {
+    height: 400px; } }
+@media screen and (max-width: 1200px) {
+  .hide-mobile {
+    display: none; }
+
+  .aboutme-text {
+    width: auto;
+    float: none;
+    margin-right: 0; } }
+@media screen and (min-width: 1100px) {
+  .head-wrapper {
+    padding-top: 30px; }
+
+  .logo {
+    float: left; }
+
+  .nav-menu {
+    float: right;
+    height: 100%; }
+    .nav-menu li {
+      font-size: 1.25em;
+      float: left;
+      margin-right: 8%; } }
+@media screen and (min-width: 1300px) {
+  #page4 {
+    height: 350px; }
+
+  .email {
+    float: left;
+    width: 50%; }
+
+  .phone {
+    float: right;
+    width: 50%; } }
+/* This makes the logo and nav menu centered */
+@media screen and (max-width: 1099px) {
+  .head-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+
+  .logo {
+    text-align: center; }
+
+  .nav-menu {
+    float: none;
+    display: block;
+    height: 39px;
+    width: 95%;
+    margin: 0 auto; }
+    .nav-menu li {
+      width: 25%;
+      font-size: 1.1em;
+      float: left;
+      text-align: center; } }
+/*
+=============================================================================
+	Mobile 
+-----------------------------------------------------------------------------	
+*/
+@media screen and (max-width: 500px) {
+  .head-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+
+  .logo {
+    text-align: center; }
+
+  .nav-menu {
+    float: none;
+    display: block;
+    height: 39px;
+    width: 95%;
+    margin: 0 auto; }
+    .nav-menu li {
+      width: 25%;
+      font-size: 1.1em;
+      float: left;
+      text-align: center; }
+
+  .box-content {
+    padding-top: 20px; }
+
+  .box-title {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; }
+
+  .tech-used {
+    float: none;
+    display: block;
+    text-align: center; }
+
+  .welcome-text h2 {
+    font-size: 2em;
+    width: 100%; }
+
+  .contactmethods a {
+    font-size: 1.2em; } }
+
+/*# sourceMappingURL=main.css.map */

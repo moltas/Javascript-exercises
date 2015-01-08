@@ -1,0 +1,215 @@
+/*
+ * Globals
+ */
+
+* { box-sizing: border-box; }
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background-repeat: no-repeat;
+
+}
+
+p {
+  font-size: 16px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
+  font-family: "Oswald";
+}
+
+h1 {
+  font-family: "Yanone Kaffeesatz";
+  font-weight: bold;
+  color: #18691D;
+}
+
+h2 { 
+  font-size: 50px;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+
+img { 
+  max-width: 100%;
+  
+}
+
+.main-content img {
+  margin: 20px 0;
+}
+
+@font-face {
+  font-family: "Yanone Kaffeesatz";
+  src: url("../fonts/YanoneKaffeesatz-bold.otf");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-regular.otf");
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+.container {
+  /*background: #EBE1BC;*/
+  min-height: 1000px;
+
+  /*box-shadow: 0 0 10px 2px #888;*/
+}
+
+
+
+/*
+ * Blog name and description
+ */
+
+.header {
+  padding-bottom: 20px;
+
+}
+.title {
+  margin-bottom: 0;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+
+.description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.main-content {
+  padding-top: 20px;
+  width: 80%;
+}
+
+.buynow {
+  margin-top: 100px;
+}
+
+
+/*  
+    USED TO BE FAT delen  
+*/
+
+.story {
+
+  padding: 10px;
+}
+
+.story figcaption{
+  display: inline;
+  font-size: 20px;
+  width: 300px;
+}
+
+.story img {
+  margin: 0;
+  float: left;
+  width: 50%;
+}
+
+.story-wrap {
+  margin-top: 20px;
+
+  width: 800px;
+}
+
+
+/*
+  INFO OM PRODUKTEN
+*/
+
+.product-info {
+  margin-top: 30px;
+}
+
+
+/* PEOPLES COMMENTS */
+
+.testimonials {
+  width: 100%;
+  padding: 2px;
+
+  background: yellow;
+
+  -webkit-box-shadow: inset 0px 5px 24px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    inset 0px 5px 24px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         inset 0px 5px 24px 0px rgba(50, 50, 50, 0.75);
+}
+
+.testimonials h4 {
+  margin-bottom: 0px;
+}
+
+.people-comments {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  width: 250px;
+  min-height: 1000px;
+  background: #242424;
+}
+
+.people-comments img {
+  margin-bottom: 5px;
+}
+
+.name:before {
+  content: "- ";
+  color: white;
+}
+
+.name {
+  color: white;
+}
+
+.person{
+  padding: 20px;
+  color: #D1D1D1;
+}
+

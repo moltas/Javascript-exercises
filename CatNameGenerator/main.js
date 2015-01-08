@@ -28,7 +28,9 @@ $(document).ready(function(){
         while(i < 1){
         	$write.html("You should name your cat <span>"+catArray[randomCat]+"</span>");
         	i++;
-        }     
+        }  
+
+           
     }
 
 });

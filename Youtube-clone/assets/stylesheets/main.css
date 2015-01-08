@@ -1,0 +1,86 @@
+body {
+	background-color: #E4E4E4;
+
+
+}
+
+#header {
+	background-color: #FFFFFF;
+	width: 2000px;
+	height: 100px;
+	position: fixed;
+	left: -50px;
+	top: -15px;
+	z-index: 2
+
+}
+
+.logo {
+	position: absolute;
+	left: 80px;
+	top: 5px;
+}
+
+.searchbar {
+	position: absolute;
+	left: 250px;
+	top: 50px;
+}
+
+#content {
+	background-color: #E4E4E4;
+	width: 1810px;
+	height: 1500px;
+	position: relative;
+	left: 50px;
+	right: 150px;
+	top: 90px;
+}
+
+.sidebar {
+	padding: 15px;
+	background-color: #FFFFFF;
+	height: 1500px;
+	width: 500px;
+	position: absolute;
+	right: -10px;
+	z-index: 1;
+	
+}
+
+.video {
+	position: absolute;
+	height: 720px;
+	top: 0px;
+}
+
+
+
+.description {
+	background-color: #FFFFFF;
+	width: 1200px
+}
+
+table tr td h4 {
+	position: relative;
+	top: 0px;
+}
+
+
+table {
+	border-spacing: 10px;
+	/*border: 2px solid black;*/
+
+}
+
+#field {
+
+	width: 800px;
+	height: 35px;
+}
+
+#submit
+{
+	height: 35px;
+	width: 75px;
+}

@@ -1,0 +1,29 @@
+<!-- This takes a number and prints the prime numbers to the console -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project Euler: problem 10</title>
+
+	</head>
+
+
+	<body>
+
+		<script>
+
+			function primeNumber(number){
+
+				for(var i=1; i<=number; i++){
+
+					if(i>1){
+						if( i == 2 || i == 3 || !(i % 2 == 0 || i % 4 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) ){
+							console.log(i);
+						}
+					}						
+				}
+			}
+			primeNumber(100);
+		</script
+	</body>
+	
+</html>

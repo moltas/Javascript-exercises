@@ -1,0 +1,33 @@
+
+div {
+	display: inline-block;
+	padding: 5px;
+}
+
+#wrapper {
+	
+	background: grey;
+	width: 150px;
+	height: 200px;
+}
+
+.number {
+	float: left;
+	text-align: center;
+	width: 25px;
+	height: 25px;
+	background: black;
+	color: white;
+	margin: 2px;
+}
+
+.operator {
+	float: left;
+	text-align: center;
+	width: 25px;
+	height: 25px;
+	background: orange;
+	color: black;
+	border: 1px solid black;
+	margin: 2px;
+}
