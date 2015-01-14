@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<title>Floating Balls</title>
+	<style>
+		body {
+			background: black;
+		}
+		.scoreboard {
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: 2px solid white;
+			color: white;
+			padding: 20px;
+			z-index: 1;
+		}
+
+	</style>		
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div class="scoreboard">
+		<h2>Ball tracker</h2>
+		<p>Balls spawned: <span id="counter">0</span></p>
+	</div>
+
+	<script>
+		window.onload = function(){
+  
+		  var canvas = document.getElementById("canvas");
+		  var ctx = canvas.getContext("2d");
+		  
+		  var W = window.innerWidth, H = window.innerHeight;
+		  canvas.width = W;
+		  canvas.height = H;
+		  
+		  var balls = [];
+
+		  var counter = 0; //keeps track of balls
+		  
+		  //Only 10 balls on the screen at once
+		  var ball_count = 10;
+		  
+		  for(var i = 0; i < ball_count; i++){
+		    balls.push(new ball()); //pushes a ball object into the array.
+		    counter++; //when balls are created, increment counter
+
+		  }
+
+		  
+		  
+		  //function that defines the properties of a ball object
+		  function ball(){
+		    
+		    //the speed is used to give location a random speed and location.
+		    this.speed = { x: randInt(-5, 5), y: randInt(-5, 5) }
+		    
+		    this.location = { x: W/2, y: H/2 }; //their starting location is in the middle of page
+		    
+		    //the life of ball
+		    this.life = randInt(200, 300); //random life between 200 to 300
+		    this.remaining_life = this.life;
+		    
+		    //defines random colors
+		    this.red = randInt(0, 255);
+		    this.green = randInt(0, 255);
+		    this.blue = randInt(0, 255);
+
+		    
+		  }
+		  
+		  //returns a random value between min and max
+		  function randInt(min,max){
+		    
+		    return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		  
+		  
+		  function draw(){
+		    
+		    ctx.fillStyle = "black";
+		    ctx.fillRect(0, 0, W, H);
+		    
+		    
+		    for(var i = 0; i < balls.length; i++){
+		      
+		      var b = balls[i];
+		      
+		      //the ball
+		      ctx.fillStyle = "rgb("+b.red+", "+b.green+", "+b.blue+")"; //uses a random color based on ball property
+		      ctx.beginPath();
+		      ctx.arc(b.location.x, b.location.y, 50, 0, Math.PI*2);
+		      ctx.fill();
+		      
+		      //Their evil smile
+		      ctx.beginPath();
+		      ctx.arc(b.location.x, b.location.y, 30, 0.8*Math.PI, 2.2*Math.PI, Math.PI*2);
+		      ctx.lineWidth = 5;
+		      ctx.strokeStyle = "black";
+		      ctx.stroke();
+		      
+		      //The eyes
+		      ctx.beginPath();
+		      ctx.arc(b.location.x-15, b.location.y-20, 5, 0, Math.PI*2);
+		      ctx.arc(b.location.x+15, b.location.y-20, 5, 0, Math.PI*2);
+		      ctx.fillStyle="black";
+		      ctx.fill();
+		      
+		      b.remaining_life--; //When their life runs out, another is born
+		      b.location.x += b.speed.x; //sets location X to a random location and speed 
+		      b.location.y += b.speed.y; //sets location Y to a random location and speed 
+		      
+		      if(b.remaining_life < 0 || b.radius < 0){
+		        //if a ball dies, another one is born :d
+		        balls[i] = new ball();
+		        counter++; //increment counter when new ball is created
+		      }
+
+		      document.getElementById("counter").innerHTML = counter;
+		          
+		    }//end for loop
+		    
+		  } //end function draw
+		  
+		  
+		  //runs the function draw at intervals with 50 millisecond delay
+		  setInterval(draw, 50);
+		  
+		}
+
+	</script>
+</body>
+</html>
