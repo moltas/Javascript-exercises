@@ -5,10 +5,11 @@
 	<style>
 		body {
 			background: black;
+			max-width: 100%;
 		}
 		.scoreboard {
 			position: absolute;
-			right: 0;
+			right: 20px;
 			top: 0;
 			border: 2px solid white;
 			color: white;
@@ -31,7 +32,7 @@
 		  var canvas = document.getElementById("canvas");
 		  var ctx = canvas.getContext("2d");
 		  
-		  var W = window.innerWidth, H = window.innerHeight;
+		  var W = window.innerWidth - 30, H = window.innerHeight;
 		  canvas.width = W;
 		  canvas.height = H;
 		  
